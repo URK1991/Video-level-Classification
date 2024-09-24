@@ -1,2 +1,2 @@
-The use of CNN-LSTM is presented in a study currently under-review 
-TranSLUCEnt, a transformer-based model is presented in the Internetional Ultrasonics Symposium (IUS-2024) in Taipei
+1. The use of CNN-LSTM is presented in a study currently under-review.
+2. TranSLUCEnt, a transformer-based model is presented in the International Ultrasonics Symposium (IUS-2024) in Taipei
