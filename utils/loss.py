@@ -1,3 +1,4 @@
+#Use this loss and import it into the train.py file for the use as criterion
 import torch.nn.functional as nnf
 
 def my_custom_loss(output, target, criterion):
