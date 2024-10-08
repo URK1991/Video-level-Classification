@@ -33,7 +33,7 @@ def train_model(lov, model_class, criterion, epochs=30, batch_size=8):
         model = model_class.to(device)
         optimizer = optim.Adam(model.parameters(), lr=0.0001)
         best_model_wts = copy.deepcopy(model.state_dict())
-        best_accuracy = float('-inf')
+        best_loss = float('-inf')
         
         print('Starting training')
         for e in tqdm(range(epochs)):
@@ -67,8 +67,8 @@ def train_model(lov, model_class, criterion, epochs=30, batch_size=8):
                 print(f'Epoch [{e+1}/{epochs}], Testing Loss: {testing_loss:.4f}')
                 
                 # Save best model weights
-                if testing_loss < best_accuracy:
-                    best_accuracy = testing_loss
+                if testing_loss < best_loss:
+                    best_loss = testing_loss
                     best_model_wts = copy.deepcopy(model.state_dict())
 
         model.load_state_dict(best_model_wts)
