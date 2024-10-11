@@ -3,6 +3,7 @@ import torch
 import torch.optim as optim
 from tqdm.auto import tqdm
 from sklearn.utils.class_weight import compute_class_weight
+from dataset.py import TrainDataset
 
 def device_avail():
     return torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
